@@ -1,0 +1,78 @@
+#Boostrap :
+
+##Kesako :
+C'est un framework gratuit (ils ont rendu bootstrap 4 payant) pour css créer par Twitter pour se faciliter et se mettre en avant.
+
+Par exemple : *Materialize pour google*
+
+##Attention :
+Faut faire attention car ce n'est qu'un outil, faut pas utiliser que cet outil pour rester le plus flexible possible car on ne sait sur quel outil on tombera quand on ira travailler.
+
+##Pourquoi ?
+
+* Pour tous les avantages qu'ils nous donnent (ne pas réinventer la roue, utilisons-là)
+* Ils ont leur propres classes et codes pour qu'un travail de groupe soit plus simple (standardisé, même vocabulaire) Ex: *primary, success, info, warning, danger sont des classes de carrés de couleur respectives bleu vert bleu clair orange et rouge*
+* Ca reste customizable donc bien pour les diffèrentes offres (sur le site internet /customize)
+* Responsive, si on utilise bien les class de bootstrap, il sera automatiquement responsive.
+
+##Pré-requis
+Une bonne connaissance de css est requise pour bien utiliser bootstrap.
+
+Le html doit être adapté pour que bootstrap soit bien appliqué. (Copier coller sur internet pour le meilleur résultat)
+
+##lien javascript
+
+On peut mettre des class de bootstrap qui met du javascript. Ex: *alert-dismiss*
+
+##Comment fonctionne le responsive
+
+(FAUT LES SLIDES MERDE!)
+div class="container" et div class"row" va créer les lignes. (Ce sont les deux class qui vont être autour de tout le code)
+Dans les div class="row" il faut mettre les div class='col-xs-#number' (#number is between 1 and 12,xs is xtrasmall(for smartphone)) et on met notre contenu dans cette div.
+
+xs = Phones<768px
+sm = Tablets >768px
+md = > 992px
+lg = Desktop > 1200px
+
+
+_Cas particulier_ : si on utilise 3 div class .col-xs-6. Il va mette la troisième en dessous du premier.
+
+Pour faire switch de l'un à l'autre voici comment faire : 
+```
+<div ='container'>
+    <div='row'>
+        <div class="col-xs-6 col-sm-3"></div>
+        <div class="col-xs-6 col-sm-3"></div>
+        <div class="col-xs-6 col-sm-3"></div>
+        <div class="col-xs-6 col-sm-3"></div>
+    </div='row'>
+</div>
+```
+
+##Mobile first avec bootstrap
+
+Si on utilise que la class .col-xs ça va s'appliquer sur tous types d'écrans.
+Sur mobile: deux lignes sont créées, une verticale et l'autre horizontal pour séparer les divs (sinon cela devient illisible)
+
+
+
+##Important
+
+NEVER BREAK .container > .row > .colsuccession 
+
+###exemples de class :
+
+- list-inline : listes en ligne.
+- alert.
+- data-toggle="modal" data-target="#sign-up" qui va appeler la div id sign-up
+- dropdown
+- popovers
+- col-sm-offset-4 (décalage de quatre colonne) qui permet de centré au final.
+- wrapper pour prendre le full taille de l'écran.
+
+Pour trouver les autres classes de ce style, ouvrir avec inspecteur une page qui utilise bootstrap pour voir les class ou RTFM(Zeal).
+
+####Hors-sujet
+
+On peut mettre deux class à une balise. ex : *``` (html)<a class='btn btn-primary'*> </a>```btn et une class et btn-primary est le second*
